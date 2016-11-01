@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Fit&Fab</title>
+		<!-- All Stylesheets -->
+		<link href="css/all-stylesheets.css" rel="stylesheet">
+		<!-- ALL COLORED STYLESHEETS -->
+		<link rel="alternate stylesheet" type="text/css" href="css/colors/blue.css" title="default">
+		
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+
+.ancalc {
+	text-align:center;
+}
+.ancalc table {
+	margin-right:auto;
+	margin-left:auto;
+	width:600px;
+	border-collapse:collapse;
+	empty-cells:show;
+	background-color:rgb(233,232,244);
+}
+.ancalc th.top {
+	padding:0 0px 0 0px;
+	empty-cells:show;
+	background-color:rgb(175,175,175);
+	color:rgb(255,255,255);
+	font-weight:bold;
+	font-size:120% !important;
+}
+.ancalc th {
+	height:3em;
+	border:solid 2px rgb(245,245,245);
+	background-color:rgb(225,225,225);
+	text-align:inherit;
+	color:rgb(80,80,80);
+	font-weight:bold;
+	font-size:100% !important;
+	font-size:90%;
+}
+.ancalc .head {
+	height:3em;
+	border:solid 2px rgb(245,245,245);
+	background-color:#CCF;
+	text-align:inherit;
+	color:rgb(80,80,80);
+	font-weight:bold;
+	font-size:100% !important;
+	font-size:90%;
+}
+.ancalc td {
+	border:solid 2px rgb(245,245,245);
+	background-color:#FFF;
+	text-align:left;
+}
+.ancalc input.output {
+	border:solid 0px rgb(245,245,245);
+	background-color:#FFF;
+}
+</style>
+<script language="JavaScript" type="text/javascript">
+
+<!-- Start JavaScript
+function calc(weight, minutes, scalefactor)
+{
+calories=(Math.round(weight * minutes * scalefactor));
+return calories;
+}
+function compute(form)
+{
+var w=form.weight.value * 1
+var m=form.minutes.value * 1
+form.aero1.value        = calc(w,m,0.044)
+form.aero2.value        = calc(w,m,0.056)
+form.aero3.value        = calc(w,m,0.032)
+form.aero4.value        = calc(w,m,0.056)
+form.aero5.value        = calc(w,m,0.080)
+form.cycle1.value       = calc(w,m,0.056)
+form.cycle2.value       = calc(w,m,0.084)
+form.circuit.value      = calc(w,m,0.064)
+form.row1.value         = calc(w,m,0.056)
+form.row2.value         = calc(w,m,0.068)
+form.ski1.value         = calc(w,m,0.076)
+form.stair1.value       = calc(w,m,0.048)
+form.weight1.value      = calc(w,m,0.024)
+form.weight2.value      = calc(w,m,0.048)
+form.basket1.value      = calc(w,m,0.064)
+form.basket2.value      = calc(w,m,0.052)
+form.cycle3.value       = calc(w,m,0.068)
+form.cycle4.value       = calc(w,m,0.064)
+form.cycle5.value       = calc(w,m,0.080)
+form.box1.value         = calc(w,m,0.072)
+form.foot1.value        = calc(w,m,0.072)
+form.foot2.value        = calc(w,m,0.064)
+form.frisbee.value      = calc(w,m,0.024)
+form.golf1.value        = calc(w,m,0.044)
+form.golf2.value        = calc(w,m,0.028)
+form.gymnast.value      = calc(w,m,0.032)
+form.hball.value        = calc(w,m,0.096)
+form.hike.value         = calc(w,m,0.048)
+form.horse.value        = calc(w,m,0.032)
+form.ice1.value         = calc(w,m,0.056)
+form.martial.value      = calc(w,m,0.080)
+form.rball1.value       = calc(w,m,0.080)
+form.rball2.value       = calc(w,m,0.056)
+form.climb1.value       = calc(w,m,0.088)
+form.climb2.value       = calc(w,m,0.064)
+form.roller1.value      = calc(w,m,0.056)
+form.rope.value         = calc(w,m,0.080)
+form.run1.value         = calc(w,m,0.064)
+form.run2.value         = calc(w,m,0.072)
+form.run3.value         = calc(w,m,0.080)
+form.run4.value         = calc(w,m,0.088)
+form.run5.value         = calc(w,m,0.100)
+form.run6.value         = calc(w,m,0.116)
+form.run7.value         = calc(w,m,0.132)
+form.run8.value         = calc(w,m,0.064)
+form.run9.value         = calc(w,m,0.072)
+form.ski2.value         = calc(w,m,0.064)
+form.ski3.value         = calc(w,m,0.048)
+form.snshoe.value       = calc(w,m,0.064)
+form.softball.value     = calc(w,m,0.040)
+form.swim1.value        = calc(w,m,0.048)
+form.tennis1.value      = calc(w,m,0.056)
+form.volley1.value      = calc(w,m,0.024)
+form.volley2.value      = calc(w,m,0.032)
+form.volley3.value      = calc(w,m,0.064)
+form.walk1.value        = calc(w,m,0.032)
+form.walk2.value        = calc(w,m,0.036)
+form.walk3.value        = calc(w,m,0.040)
+form.walk4.value        = calc(w,m,0.048)
+form.ski4.value         = calc(w,m,0.048)
+form.polo.value         = calc(w,m,0.080)
+form.whitewater.value   = calc(w,m,0.040)
+form.wood.value         = calc(w,m,0.048)
+form.garden.value       = calc(w,m,0.036)
+form.clean.value        = calc(w,m,0.028)
+form.mow1.value         = calc(w,m,0.044)
+form.mow2.value         = calc(w,m,0.036)
+form.snow1.value        = calc(w,m,0.036)
+form.games.value        = calc(w,m,0.040)
+form.lawn.value         = calc(w,m,0.032)
+form.sex.value          = calc(w,m,0.012)
+form.snow2.value        = calc(w,m,0.048)
+}
+function clearvalues(form)
+{
+form.weight.value   = ""
+form.minutes.value  = ""
+form.aero1.value        = ""
+form.aero2.value        = ""
+form.aero3.value        = ""
+form.aero4.value        = ""
+form.aero5.value        = ""
+form.cycle1.value       = ""
+form.cycle2.value       = ""
+form.circuit.value      = ""
+form.row1.value         = ""
+form.row2.value         = ""
+form.ski1.value         = ""
+form.stair1.value       = ""
+form.weight1.value      = ""
+form.weight2.value      = ""
+form.basket1.value      = ""
+form.basket2.value      = ""
+form.cycle3.value       = ""
+form.cycle4.value       = ""
+form.cycle5.value       = ""
+form.box1.value         = ""
+form.foot1.value        = ""
+form.foot2.value        = ""
+form.frisbee.value      = ""
+form.golf1.value        = ""
+form.golf2.value        = ""
+form.gymnast.value      = ""
+form.hball.value        = ""
+form.hike.value         = ""
+form.horse.value        = ""
+form.ice1.value         = ""
+form.martial.value      = ""
+form.rball1.value       = ""
+form.rball2.value       = ""
+form.climb1.value       = ""
+form.climb2.value       = ""
+form.roller1.value      = ""
+form.rope.value         = ""
+form.run1.value         = ""
+form.run2.value         = ""
+form.run3.value         = ""
+form.run4.value         = ""
+form.run5.value         = ""
+form.run6.value         = ""
+form.run7.value         = ""
+form.run8.value         = ""
+form.run9.value         = ""
+form.ski2.value         = ""
+form.ski3.value         = ""
+form.snshoe.value       = ""
+form.softball.value     = ""
+form.swim1.value        = ""
+form.tennis1.value      = ""
+form.volley1.value      = ""
+form.volley2.value      = ""
+form.volley3.value      = ""
+form.walk1.value        = ""
+form.walk2.value        = ""
+form.walk3.value        = ""
+form.walk4.value        = ""
+form.ski4.value         = ""
+form.polo.value         = ""
+form.whitewater.value   = ""
+form.wood.value         = ""
+form.garden.value       = ""
+form.clean.value        = ""
+form.mow1.value         = ""
+form.mow2.value         = ""
+form.snow1.value        = ""
+form.games.value        = ""
+form.lawn.value         = ""
+form.sex.value          = ""
+form.snow2.value        = ""
+}
+// end JavaScript -->
+
+
+
+
+
+
+
+
+</script>
+	</head>
+	<body>
+		<!-- ABOUT US BANNER STARTS -->
+		<div class="inner-banner parallax-1">
+			<div class="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-md-7 col-sm-6">
+							<h1><span>Activity Calculator</span></h1>
+							<ol class="breadcrumb">
+								<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+							</li>
+								<li class="active">Activity Calculator</li>
+							</ol>
+						</div>
+						<a href="signin/signin.php">
+						<div class="col-lg-4 col-md-5 col-sm-6">
+							<div class="box blue-bg">
+								<h2><strong>START</strong> to engage in sports right now</h2>
+							</div>
+						</div></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ABOUT US BANNER ENDS -->
+		<!-- NAVIGATION STARTS
+			========================================================================= -->
+		<nav id="navigation" class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="images/logos/logo-1.png" width="195" height="70" alt="" ></a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html" class="external">Home</a></li>
+					<!--	<li class="dropdown active">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									<li><a href="index.html" class="external">Fitness</a></li>
+							<li><a href="http://webagate.com/demos/alia/laforza-sport-fitness-yoga-multipurpose-responsive-html-template/Yoga/index.html" class="external">Yoga</a></li>
+								<li><a href="http://webagate.com/demos/alia/laforza-sport-fitness-yoga-multipurpose-responsive-html-template/Fight/index.html" class="external">Fight</a></li> 
+							</ul>
+						</li> -->
+						<li><a href="about-us.html" class="external">About Us</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculators<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="BMI.html" class="external">BMI</a></li>
+								<li><a href="BMR.html" class="external">BMR</a></li>
+								<li><a href="calories-intake.html" class="external">Caloric Intake</a></li>
+								<li><a href="activity-cal.html" class="external">Activity</a></li>
+								<li><a href="heart-rate.html" class="external">Heart Rate</a></li>
+								<li><a href="bodyfat-cal.php" class="external">Body Fat</a></li>
+								<li><a href="ideal-weight-cal.html" class="external">Ideal Weight</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Goals<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="weight-loss.html" class="external">Weight Loss</a></li>
+								<li><a href="weight-gain.html" class="external">Weight Gain</a></li>
+								<li><a href="maintain.html" class="external">Maintain</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Traning <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="weight-traning.html" class="external">Weight Traning</a></li>
+								<li><a href="yoga.html" class="external">Yoga</a></li>
+								<li><a href="cardio.html" class="external">Cardio</a></li>
+							</ul>
+						</li>
+						<li><a href="Recipes.html" class="external">Recipes</a></li>
+					<!--	<li><a href="events.html" class="external">Events</a></li>
+						<li><a href="stories.html" class="external">Stories</a></li> -->
+						
+					<!--	<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Details <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="blog-details.html" class="external">Blog Details</a></li>
+								<li><a href="classes-details.html" class="external">Classes Details</a></li>
+								<li><a href="event-details.html" class="external">Events Details</a></li>
+								<li><a href="trainer-details.html" class="external">Trainer Details</a></li>
+							</ul>
+						</li> -->
+						<li><a href="signin/signin.php" class="external">Login In</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</nav>
+		<!-- /. NAVIGATION ENDS
+			========================================================================= -->
+		<!-- ABOUT US CONTENTS STARTS
+			========================================================================= -->
+		<div class="about-us">
+			<!-- INTRO STARTS
+				========================================================================= -->
+			<div class="container intro">
+				<div class="row">
+					<div class="col-lg-8 col-md-8">
+						<h1>Activity Calculator</h1>
+						
+						<div class="description">
+						How can you burn off some of those extra calories before they turn into extra pounds? After thinking about a particular dish you savored (was it that brownie sundae?), try our “Get Moving! Calculator” to see how many calories you expend doing your favorite exercise or activity.<br>
+Note: Figures are based on moderate (as opposed to vigorous) activity. A heavier person burns more calories, so the same amount of physical activity can actually burn the same number of calories but more quickly. But remember, exercising harder and faster only increases the calories expended slightly. To burn more calories it is better to exercise for a longer time.<br>
+Determining how many calories you burn is not an exact science. This number should only be used as an estimate of calorie expenditure.<br><br>
+						</div>
+						<div class ="ancalc">
+
+  <FORM method=post>
+    
+      <TABLE>
+<TR>
+  <th colSpan=4 class="top">Excercise Calorie Calculator</th>
+</TR>
+<TR>
+        <th colSpan=4>
+          Enter the following data</th>
+        </TR>
+        <TR>
+          <TD colSpan=4><TABLE>
+              <TBODY>
+                <TR>
+                  <TD>Weight (in lbs.):</TD>
+                  <TD>
+                      <INPUT size=3 value=20 name=weight>
+                    </TD>
+                  <TD>Time (in min.):</TD>
+                  <TD>
+                      <INPUT size=4 value=60 
+name=minutes>
+                    </TD>
+                </TR>
+              </TBODY>
+            </TABLE></TD>
+        </TR>
+        <TR>
+          <TD colSpan=4><input onClick=compute(this.form); type=button value=" Calculate Calories Burned " name=SubmitName>
+            <input onClick=clearvalues(this.form); type=button value=" Clear And Start Again " name=clear></TD>
+        </TR>
+        <TR>
+          <th colSpan=4>Results </th>
+        </TR>
+        <TR>
+          <th colSpan=4 class="head">Gym 
+            and Home Activities</th>
+        </TR>
+        <TR>
+          <TD>Aerobics: low impact</TD>
+          <TD>
+              
+              <INPUT size=8 value=53 name=aero1>
+              
+            </TD>
+          <TD>Aerobics: high impact</TD>
+          <TD>
+              
+              <INPUT size=8 value=67 name=aero2>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Aerobics, Step: low impact</TD>
+          <TD>
+              
+              <INPUT size=8 value=67 name=aero4>
+              
+            </TD>
+          <TD>Aerobics, Step: high impact</TD>
+          <TD>
+              
+              <INPUT size=8 value=96 name=aero5>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Aerobics: water</TD>
+          <TD>
+              
+              <INPUT size=8 value=38 name=aero3>
+              
+            </TD>
+          <TD>Bicycling, Stationary: moderate</TD>
+          <TD>
+              
+              <INPUT size=8 value=67 name=cycle1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Bicycling, Stationary: vigorous</TD>
+          <TD>
+              
+              <INPUT size=8 value=101 name=cycle2>
+              
+            </TD>
+          <TD>Circuit Training: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=circuit>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Rowing, Stationary: moderate</TD>
+          <TD>
+              
+              <INPUT size=8 value=67 name=row1>
+              
+            </TD>
+          <TD>Rowing, Stationary: vigorous</TD>
+          <TD>
+              
+              <INPUT size=8 value=82 name=row2>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Ski Machine: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=91 name=ski1>
+              
+            </TD>
+          <TD>Stair Step Machine: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=58 name=stair1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Weight Lifting: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=29 name=weight1>
+              
+            </TD>
+          <TD>Weight Lifting: vigorous</TD>
+          <TD>
+              
+              <INPUT size=8 value=58 name=weight2>
+              
+            </TD>
+        </TR>
+        <TR>
+          <th colSpan=4 class="head">Training 
+            Activities</th>
+        </TR>
+        <TR>
+          <TD>Basketball: playing a game</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=basket1>
+              
+            </TD>
+          <TD>Basketball: wheelchair</TD>
+          <TD>
+              
+              <INPUT size=8 value=62 name=basket2>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Bicycling: BMX or mountain</TD>
+          <TD>
+              
+              <INPUT size=8 value=82 name=cycle3>
+              
+            </TD>
+          <TD>Bicycling: 12-13.9 mph</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=cycle4>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Bicycling: 14-15.9 mph</TD>
+          <TD>
+              
+              <INPUT size=8 value=96 name=cycle5>
+              
+            </TD>
+          <TD>Boxing: sparring</TD>
+          <TD>
+              
+              <INPUT size=8 value=86 name=box1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Football: competitive</TD>
+          <TD>
+              
+              <INPUT size=8 value=86 name=foot1>
+              
+            </TD>
+          <TD>Football: touch, flag, general</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=foot2>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Frisbee</TD>
+          <TD>
+              
+              <INPUT size=8 value=29 name=frisbee>
+              
+            </TD>
+          <TD>Golf: carrying clubs</TD>
+          <TD>
+              
+              <INPUT size=8 value=53 name=golf1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Golf: using cart</TD>
+          <TD>
+              
+              <INPUT size=8 value=34 name=golf2>
+              
+            </TD>
+          <TD>Gymnastics: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=38 name=gymnast>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Handball: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=115 name=hball>
+              
+            </TD>
+          <TD>Hiking: cross-country</TD>
+          <TD>
+              
+              <INPUT size=8 value=58 name=hike>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Horseback Riding: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=38 name=horse>
+              
+            </TD>
+          <TD>Ice Skating: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=67 name=ice1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Martial Arts: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=96 name=martial>
+              
+            </TD>
+          <TD>Racquetball: competitive</TD>
+          <TD>
+              
+              <INPUT size=8 value=96 name=rball1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Racquetball: casual, general</TD>
+          <TD>
+              
+              <INPUT size=8 value=67 name=rball2>
+              
+            </TD>
+          <TD>Rock Climbing: ascending</TD>
+          <TD>
+              
+              <INPUT size=8 value=106 name=climb1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Rock Climbing: repelling</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=climb2>
+              
+            </TD>
+          <TD>Rollerblade Skating</TD>
+          <TD>
+              
+              <INPUT size=8 value=67 name=roller1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Rope Jumping</TD>
+          <TD>
+              
+              <INPUT size=8 value=96 name=rope>
+              
+            </TD>
+          <TD>Running: 5 mph (12 min/mile)</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=run1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Running: 5.2 mph (11.5 min/mile)</TD>
+          <TD>
+              
+              <INPUT size=8 value=86 name=run2>
+              
+            </TD>
+          <TD>Running: 6 mph (10 min/mile)</TD>
+          <TD>
+              
+              <INPUT size=8 value=96 name=run3>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Running: 6.7 mph (9 min/mile)</TD>
+          <TD>
+              
+              <INPUT size=8 value=106 name=run4>
+              
+            </TD>
+          <TD>Running: 7.5 mph (8 min/mile)</TD>
+          <TD>
+              
+              <INPUT size=8 value=120 name=run5>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Running: 8.6 mph (7 min/mile)</TD>
+          <TD>
+              
+              <INPUT size=8 value=139 name=run6>
+              
+            </TD>
+          <TD>Running: 10 mph (6 min/mile)</TD>
+          <TD>
+              
+              <INPUT size=8 value=158 name=run7>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Running: pushing wheelchair, marathon 
+            wheeling</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=run8>
+              
+            </TD>
+          <TD>Running: cross-country</TD>
+          <TD>
+              
+              <INPUT size=8 value=86 name=run9>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Skiing: cross-country</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=ski2>
+              
+            </TD>
+          <TD>Skiing: downhill</TD>
+          <TD>
+              
+              <INPUT size=8 value=58 name=ski3>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Snow Shoeing</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=snshoe>
+              
+            </TD>
+          <TD>Softball: general play</TD>
+          <TD>
+              
+              <INPUT size=8 value=48 name=softball>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Swimming: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=58 name=swim1>
+              
+            </TD>
+          <TD>Tennis: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=67 name=tennis1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Volleyball: non-competitive,<BR>
+            general play</TD>
+          <TD>
+              
+              <INPUT size=8 value=29 name=volley1>
+              
+            </TD>
+          <TD>Volleyball: competitive, gymnasium 
+            play</TD>
+          <TD>
+              
+              <INPUT size=8 value=38 name=volley2>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Volleyball: beach</TD>
+          <TD>
+              
+              <INPUT size=8 value=77 name=volley3>
+              
+            </TD>
+          <TD>Walk: 3.5 mph (17 min/mi)</TD>
+          <TD>
+              
+              <INPUT size=8 value=38 name=walk1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Walk: 4 mph (15 min/mi)</TD>
+          <TD>
+              
+              <INPUT size=8 value=43 name=walk2>
+              
+            </TD>
+          <TD>Walk: 4.5 mph (13 min/mi)</TD>
+          <TD>
+              
+              <INPUT size=8 value=48 name=walk3>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Walk/Jog: jog &lt;10 min.</TD>
+          <TD>
+              
+              <INPUT size=8 value=58 name=walk4>
+              
+            </TD>
+          <TD>Water Skiing</TD>
+          <TD>
+              
+              <INPUT size=8 value=58 name=ski4>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Water Polo</TD>
+          <TD>
+              
+              <INPUT size=8 value=96 name=polo>
+              
+            </TD>
+          <TD>Whitewater: rafting, kayaking</TD>
+          <TD>
+              
+              <INPUT size=8 value=48 name=whitewater>
+              
+            </TD>
+        </TR>
+        <TR>
+          <th colSpan=4 class="head">Daily 
+            Life Activities</th>
+        </TR>
+        <TR>
+          <TD>Chopping &amp; Splitting Wood</TD>
+          <TD>
+              
+              <INPUT size=8 value=58 name=wood>
+              
+            </TD>
+          <TD>Gardening: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=43 name=garden>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Housecleaning: general</TD>
+          <TD>
+              
+              <INPUT size=8 value=34 name=clean>
+              
+            </TD>
+          <TD>Mowing Lawn: push, hand</TD>
+          <TD>
+              
+              <INPUT size=8 value=53 name=mow1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Mowing Lawn: push, power</TD>
+          <TD>
+              
+              <INPUT size=8 value=43 name=mow2>
+              
+            </TD>
+          <TD>Operate Snow Blower: walking</TD>
+          <TD>
+              
+              <INPUT size=8 value=43 name=snow1>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Children's Games: 4-square, etc.</TD>
+          <TD>
+              
+              <INPUT size=8 value=48 name=games>
+              
+            </TD>
+          <TD>Raking Lawn</TD>
+          <TD>
+              
+              <INPUT size=8 value=38 name=lawn>
+              
+            </TD>
+        </TR>
+        <TR>
+          <TD>Sex: moderate effort</TD>
+          <TD>
+              
+              <INPUT size=8 value=14 name=sex>
+              
+            </TD>
+          <TD>Shoveling Snow: by hand</TD>
+          <TD>
+              
+              <INPUT size=8 value=58 
+name=snow2>
+              
+            </TD>
+        </TR>
+      </TABLE>
+    
+  </FORM>
+
+</div>
+					</div>
+					
+				</div>
+			</div>
+			<!-- /. INTRO ENDS
+				========================================================================= -->
+			<!-- CLIENT STORIES STARTS
+				========================================================================= -->
+		
+			<!-- /. CLIENT STORIES ENDS
+				========================================================================= --> 
+			<!-- TEAM STARTS
+				========================================================================= -->     
+		
+			<!-- /. TEAM ENDS
+				========================================================================= -->
+			<!-- OUR PHOTOS STARTS
+				========================================================================= -->
+			
+			<!-- /. OUR PHOTOS ENDS
+				========================================================================= -->   
+		</div>
+		<!-- /. ABOUT US CONTENTS ENDS
+			========================================================================= -->
+		<!-- STRIP STARTS
+			========================================================================= -->
+		<div class="totop-strip blue-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"><img src="images/logos/logo-1.png" alt="" ></div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+						<div class="scrollup"><a href="#"></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /. STRIP ENDS
+			========================================================================= -->
+		<!-- FOOTER STARTS
+			========================================================================= -->
+		<footer class="dark-grey-bg">
+			<div class="container">
+				<div class="row">
+					<!-- Stories Starts -->
+					<div class="col-lg-4 clearfix f-stories">
+						<div class="stories-carousel">
+							<!-- Story Starts -->
+							<div class="block">
+								<h1>Stories</h1>
+								<div class="picture">
+									<img src="images/news/carousel/2.jpg" class="img-responsive" alt="" >
+									<div class="name">Nitin<br>Agarwal</div>
+								</div>
+								<div class="description">True healthy care reform starts in your kitchen, is something everyone who has to follow. for better health small steps are needed.</div>
+							</div>
+							<div class="block">
+								<h1>Stories</h1>
+								<div class="picture">
+									<img src="images/news/carousel/1.jpg" class="img-responsive" alt="" >
+									<div class="name">Pooja K<br>Kulkarni</div>
+								</div>
+								<div class="description">A fit and healthy body, that is the best fashion statement. is the new trend followed by everyone. staying fit is not a option it is the way of life.</div>
+							</div>
+							<!-- Story Ends -->
+							<!-- Story Starts -->
+							<div class="block">
+								<h1>Stories</h1>
+								<div class="picture">
+									<img src="images/news/carousel/3.jpg" class="img-responsive" alt="" >
+									<div class="name">R Afreen<br>Aftab</div>
+								</div>
+								<div class="description">Body is the only place you have to live in, hence its are responsibility to take care of it.</div>
+							</div>
+							<!-- Story Ends -->
+						</div>
+					</div>
+					<!-- Stories Ends -->
+					<!-- Links Starts -->
+					<div class="col-lg-5 links">
+						<div class="block">
+							<h1>Pages</h1>
+							<div class="row">
+								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+									<ul class="links">
+										
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about-us.html">About us</a></li>
+						
+						
+						
+						
+						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exercises<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="weight-traning.html" class="external">Weight Lifting</a></li>
+								<li><a href="yoga.html" class="external">Yoga</a></li>
+								<li><a href="cardio.html" class="external">Cardio</a></li>
+							</ul>
+						</li>
+										
+										<li><a href="Recipes.html">Recipes</a></li>
+										
+										
+									</ul>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+									<ul class="links">
+									
+									<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculator<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="BMI.html" class="external">BMI</a></li>
+								<li><a href="BMR.html" class="external">BMR</a></li>
+								<li><a href="calories-intake.html" class="external">Caloric Intake</a></li>
+								<li><a href="activity-cal.html" class="external">Activity</a></li>
+								<li><a href="heart-rate.html" class="external">Heart Rate</a></li>
+								<li><a href="bodyfat-cal.html" class="external">Body fat</a></li>
+								<li><a href="ideal-weight-cal.html" class="external">Ideal Weight</a></li>
+							</ul>
+						</li>
+							<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Goals <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="weight-loss.html" class="external">weight loss</a></li>
+								<li><a href="weight-gain.html" class="external">Weight gain</a></li>
+								<li><a href="maintain.html" class="external">Maintain</a></li>
+							</ul>
+						</li>	
+						<li><a href="signin/sign-in.html">Login</a></li>						
+									</ul>
+								</div>
+							<!--	<div class="col-lg-5 instagram">
+									<!-- SnapWidget -->
+								<!--	<script src="../../../../../snapwidget.com/js/snapwidget.js"></script>
+									<iframe src="http://snapwidget.com/in/?h=ZW52YXRvc3R1ZGlvfGlufDQwfDJ8Mnx8bm98OHxmYWRlT3V0fG9uU3RhcnR8eWVzfHllcw==&amp;ve=121115" title="Instagram Widget" class="snapwidget-widget" style="border:none; overflow:hidden; width:100%;"></iframe>
+									Instagram Photos
+								</div> -->
+							</div>
+						</div>
+					</div>
+					<!-- Links Ends -->
+					<!-- Contact Starts -->
+					<div class="col-lg-3 contact">
+						<div class="block">
+							<h1>Contacts</h1>
+							<ul>
+								<li>
+									<div class="icon"><i class="fa fa-phone"></i></div>
+									<div class="text">Telephone:  + 91 966 000 9901</div>
+								</li>
+							<!--	<li>
+									<div class="icon"><i class="fa fa-fax"></i></div>
+									<div class="text">Fax/phone:  + 91 966 000 9901</div>
+								</li> -->
+								<li>
+									<div class="icon"><i class="fa fa-envelope"></i></div>
+									<div class="text">E-mail:  <a href="#">agarwalnitin192@gmail.com</a></div>
+								</li>
+								<li>
+									<div class="icon"><i class="fa fa-map-marker"></i></div>
+									<div class="text">Adress: BMS college of Enginnering.<br>Bull temple Road.<br>Bangalore,<br>PinCode: 56 00 19</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- Contact Ends -->
+				</div>
+			</div>
+		</footer>
+		<!-- /. FOOTER ENDS
+			========================================================================= -->
+		<!-- COPYRIGHT STARTS
+			========================================================================= -->
+		<div class="copyright medium-grey-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">Copyright © 2016 <a href="#">Fit&Fab</a></div>
+					<div class="col-lg-6">
+						<ul class="social-icons">
+							<li>Social Links:</li>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /. COPYRIGHT ENDS
+			========================================================================= -->
+		<!-- STYLE SWITCHER PANEL STARTS
+			========================================================================= -->
+	
+		<!-- /.STYLE SWITCHER PANEL ENDS 
+			========================================================================= -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Style Switcher -->
+		<script src="js/styleswitcher/styleswitcher.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function() {
+			    "use strict";
+			    $("#hide, #show").click(function() {
+			        if ($("#show").is(":visible")) {
+			
+			            $("#show").animate({
+			                "margin-left": "-400px"
+			            }, 400, function() {
+			                $(this).hide();
+			            });
+			
+			            $("#switch").animate({
+			                "margin-left": "0px"
+			            }, 400).show();
+			        } else {
+			            $("#switch").animate({
+			                "margin-left": "-400px"
+			            }, 400, function() {
+			                $(this).hide();
+			            });
+			            $("#show").show().animate({
+			                "margin-left": "0"
+			            }, 400);
+			        }
+			    });			
+			});					
+		</script>
+		<!-- Isotope Gallery --> 
+		<script type="text/javascript" src="js/isotope/jquery.isotope.min.js"></script> 
+		<script type="text/javascript" src="js/isotope/custom-isotope-mansory.js"></script>
+		<!-- Magnific Popup core JS file -->
+		<script type="text/javascript" src="js/magnific-popup/jquery.magnific-popup.js"></script>		
+		<!-- Owl Carousel --> 
+		<script type="text/javascript" src="js/owl-carousel/owl.carousel.js"></script>        
+		<!-- FitVids --> 
+		<script type="text/javascript" src="js/fitvids/jquery.fitvids.js"></script>
+        <!-- ScrollTo --> 
+		<script type="text/javascript" src="js/nav/jquery.scrollTo.js"></script> 
+		<script type="text/javascript" src="js/nav/jquery.nav.js"></script>
+		<!-- Sticky --> 
+		<script type="text/javascript" src="js/sticky/jquery.sticky.js"></script>		
+		<!-- Custom JS -->
+		<script src="js/custom/custom.js"></script>
+	</body>
+
+<!-- Mirrored from webagate.com/demos/alia/laforza-sport-fitness-yoga-multipurpose-responsive-html-template/Fitness/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Apr 2016 15:33:05 GMT -->
+</html>

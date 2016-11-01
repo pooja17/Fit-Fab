@@ -1,0 +1,89 @@
+.fitPanel {
+  text-align: center;
+  width: 410px;
+  float: right;
+  margin-right: -255px;
+  
+  font-family: Verdana, Helvetica;
+  font-size: 1.1rem;
+  color: White;
+  letter-spacing: 0.7px;
+}
+
+.fitbadge {
+  width: 364px;
+  height: 50px;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+.fitUnderweight {
+  width: 91px;
+  background-color: rgba(246, 210, 0, 1.0);
+  float: left;
+  height: 50px;
+  line-height: 23px;
+}
+
+.fitNormal {
+  width: 91px;
+  background-color: rgba(140, 197, 62, 1.0);
+  float: left;
+  height: 50px;
+  line-height: 23px;
+}
+
+.fitOverweight {
+  width: 91px;
+  background-color: rgba(246, 210, 0, 1.0);
+  float: left;
+  height: 50px;
+  line-height: 23px;
+}
+
+.fitObese {
+  width: 91px;
+  background-color: rgba(240, 65, 35, 1.0);
+  float: left;
+  height: 50px;
+  line-height: 23px;
+}
+
+.fitLabel {
+  margin-top: -17px;
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  font-family: Helvetica;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: rgba(51,51,51,1.0);
+}
+
+.fitArrow {
+  position: relative;
+  
+  font-family: Helvetica;
+  font-size: 3.5rem;
+  color: rgba(51,51,51,1.0);
+}
+
+.fitBmi {
+  margin-top: -15px;
+  position: relative;
+  
+  font-family: Helvetica;
+  font-size: 1.6rem;
+  color: rgba(51,51,51,1.0);
+}
+
+.bmiContainer 
+{
+  width: 160px;
+  margin: 9px 12px 4px 6px;
+}

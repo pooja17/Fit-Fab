@@ -1,0 +1,9 @@
+signinadmin
+adminview
+updateadmin
+admin
+delete
+
+
+
+<h3><a href="signinadmin.php">Admin</a></h3>

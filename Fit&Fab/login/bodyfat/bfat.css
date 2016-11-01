@@ -1,0 +1,45 @@
+#bfat {
+margin : 5px;
+background-color : #FFFFFF;
+width : 220px;
+border : 1px solid #000;
+overflow : hidden;
+font : 0.8em verdana, arial, sans-serif;
+color : #000;
+}
+#bfat legend {
+font : bold 0.9em verdana, arial, sans-serif;
+background-color : #ffffcc;
+}
+#bfat label {
+display : block;
+clear : left;
+float : left;
+width : 85px;
+text-align : right;
+margin : 3px;
+}
+#bfat label.bfatb {
+clear : none;
+width : 100px;
+text-align : left;
+
+}
+#bfat input {
+float : left;
+margin : 3px;
+padding : 2px;
+border : 1px inset #000;
+}
+#bfat #bfatbutton {
+float : none;
+width : 70px;
+margin : 3px 75px;
+font-size : 1em;
+background-color : #ccc;
+border : 2px outset #666;
+}
+#bfat .bfatmessage {
+height:2.4em;
+color:#f00;
+}
